@@ -6,7 +6,7 @@
 3. If num is multiple of 3 and 5: return fizzbuzz
 4. If num is not multiple of 3 and 5: return num itself
 
-```sh
+```python
 from robot import robot 
 
 robot(9)     'fizz'
