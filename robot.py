@@ -1,11 +1,19 @@
+from functools import partial
+
+
+multiple_of = lambda base, num: num % base == 0
+multiple_of_3 = partial(multiple_of, 3)
+multiple_of_5 = partial(multiple_of, 5)
+
+
 def robot(num):
     say = str(num)
 
-    if num % 3 == 0 and num % 5 == 0:
+    if multiple_of_3(num) and multiple_of_5(num):
         say = 'fizzbuzz'
-    elif num % 5 == 0:
+    elif multiple_of_5(num):
         say = 'buzz'
-    elif num % 3 == 0:
+    elif multiple_of_3(num):
         say = 'fizz'
 
     return say
