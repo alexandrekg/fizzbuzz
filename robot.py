@@ -1,14 +1,14 @@
 def robot(num):
+    say = str(num)
+
     if num % 3 == 0 and num % 5 == 0:
-        return 'fizzbuzz'
+        say = 'fizzbuzz'
+    elif num % 5 == 0:
+        say = 'buzz'
+    elif num % 3 == 0:
+        say = 'fizz'
 
-    if num % 5 == 0:
-        return 'buzz'
-
-    if num % 3 == 0:
-        return 'fizz'
-
-    return str(num)
+    return say
 
 
 if __name__ == "__main__":
